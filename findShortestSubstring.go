@@ -1,3 +1,4 @@
+# This program calculates shortest substring containing strings from input array.
 package main
 
 import (
@@ -42,7 +43,7 @@ func shortestString (input string, outputList []string) {
   fmt.Println(inputArray[i])
   fmt.Println(i)
 
-    
+
   }
 
 }
