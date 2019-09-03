@@ -34,10 +34,10 @@ func traverse(g *graph) map[*Vertex]bool {
   visited := make (map[*Vertex]bool)
   queue = append(queue,g.vertices[0])
   for (len (queue) > 0) {
-    v := queue[len(queue)-1]
+    v := queue[0]
     queue = queue[:len(queue)-1]
     for _, node := range g.edges[v] {
-      if _, ok :=  visited[node]; !ok {
+      if !visited[node] {
         visited[node] = true
         queue = append(queue, node)
       }
