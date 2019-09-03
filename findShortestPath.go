@@ -27,7 +27,11 @@ func isValid(maze [][]int, visited [][]bool, i, j, x, y int) bool {
 func dequeue(queue []int) (int, []int) {
   fmt.Println("dequeuing", queue)
   q := queue[0]
-  queue = queue[:len(queue)-1]
+  if len(queue) > 1 {
+    queue = queue[1:len(queue)-1]
+  } else {
+    queue = nil
+  }
   fmt.Println("queue", q)
   return q, queue
 }
